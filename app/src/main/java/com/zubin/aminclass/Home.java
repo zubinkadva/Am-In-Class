@@ -8,6 +8,7 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.media.AudioManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -26,8 +27,8 @@ public class Home extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        // CN   DS  ACV
-        int[] times = {15, 23, 16, 52, 16, 54, 18, 24, 9, 54, 10, 54, 11, 54, 12, 54};
+        // CN    DS    ACV    CSS    WORK
+        int[] times = {15, 23, 16, 52, 7, 53, 9, 22, 10, 53, 12, 22, 11, 53, 12, 57, 20, 0};
         for (int i = 1; i <= times.length; i += 2) {
             Intent alarmIntent = new Intent(Home.this, AlarmReceiver.class);
             alarmIntent.putExtra("id", id);
